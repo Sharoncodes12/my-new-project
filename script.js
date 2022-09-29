@@ -60,13 +60,10 @@ function getCurrentLocation(event) {
 //Feature #1
 let currentDate = document.querySelector("#current-date");
 let now = new Date();
-currentDate.innerHTML = formatDate(now);
 
 // Feature #2
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
