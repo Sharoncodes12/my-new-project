@@ -1,0 +1,45 @@
+function formatDate(date) {
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+
+  return `${day} ${hours}:${minutes}`;
+}
+
+function handleSubmit(event) {
+  debugger;
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+//Feature #1
+let currentDate = document.querySelector("#current-date");
+let now = new Date();
+
+// Feature #2
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("New York");
