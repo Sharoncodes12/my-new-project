@@ -1,8 +1,20 @@
 function displayTemperature(response) {
-
   console.log(response.data);
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
 
-  let apiKey = "de3c7a97f3372cdd58943ef92e9f54b6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = "Friday 4:15";
 }
+let apiKey = "410cf190dd5330b9f4ed3cdf7fd19946";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(displayTemperature);
