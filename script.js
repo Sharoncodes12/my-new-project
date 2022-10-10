@@ -55,6 +55,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
   console.log(cityInputElement.value);
 }
-
+search("France");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
