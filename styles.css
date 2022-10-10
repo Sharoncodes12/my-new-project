@@ -12,8 +12,8 @@ h1 {
   margin: 0;
 }
 ul {
-  margin: 0 0 10px;
-  padding: 0 2px 20px 0;
+  margin: 0 0 5px 10px;
+  padding: 0 2px 30px 0;
 }
 li {
   color: rgb(135, 135, 135);
@@ -48,6 +48,7 @@ li:first-letter {
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
+  padding-top: 0;
 }
 .weather-temperature .units {
   position: relative;
@@ -62,17 +63,7 @@ li:first-letter {
   width: 64px;
   margin-right: 10px;
 }
-.temperature {
-  color: rgb(135, 135, 135);
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-  padding: 15px 0 10px 0;
-}
-.units {
-  position: relative;
-  top: -34px;
-}
+
 .ref {
   display: block;
   margin: 10px auto;
